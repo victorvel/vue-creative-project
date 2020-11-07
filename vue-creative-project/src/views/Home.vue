@@ -5,8 +5,8 @@
         <i class="fas fa-search"></i><input v-model="searchText" />
       </form>
     </div>
+    <class-data :singleClass="singleClass" />
   </div>
-  <!-- <ClassData :singleClass="singleClass"/> -->
 </template>
 
 <script>
