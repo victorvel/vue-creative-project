@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="search">
+      <form class="pure-form">
+        <i class="fas fa-search"></i><input v-model="searchText" />
+      </form>
+    </div>
   </div>
+  <!-- <ClassData :singleClass="singleClass"/> -->
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import ClassData from "../components/ClassData.vue"
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    ClassData
+  },
+  data() {
+    return {
+      searchText: '',
+    }
+  },
+  computed: {
+  classes() {
+    return this.ClassData.singleClass.filter(singleClass => singleClass.name.toLowerCase().search(this.searchText) >= 0 );
   }
+}
+
 }
 </script>
