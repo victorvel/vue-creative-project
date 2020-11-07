@@ -10,22 +10,24 @@
 </template>
 
 <script>
-import ClassData from "../components/ClassData.vue"
+import ClassData from "../components/ClassData.vue";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    ClassData
+    ClassData,
   },
   data() {
     return {
-      searchText: '',
-    }
+      searchText: "",
+    };
   },
   computed: {
-  classes() {
-    return this.ClassData.singleClass.filter(singleClass => singleClass.name.toLowerCase().search(this.searchText) >= 0 );
-  }
-}
-
-}
+    classes() {
+      return this.ClassData.singleClass.filter(
+        (singleClass) =>
+          singleClass.name.toLowerCase().search(this.searchText) >= 0
+      );
+    },
+  },
+};
 </script>
