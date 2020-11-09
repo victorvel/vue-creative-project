@@ -14,3 +14,12 @@
   </div>
 </div>
 </template>
+
+<script>
+  export default {
+    name: 'class-data',
+    props: {
+      products: Array
+    }
+  }
+</script>

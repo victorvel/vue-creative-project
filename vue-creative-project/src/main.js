@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import classData from '../../data/class-data'
-
-Vue.config.productionTip = false
+import classData from '../class-data'
 
 let data = {
   classData: classData,
