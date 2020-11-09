@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import classData from '../class-data'
+import classData from '../class-data.js'
 
 let data = {
-  classData: classData,
+  classes: classData,
 }
 new Vue({
   router,

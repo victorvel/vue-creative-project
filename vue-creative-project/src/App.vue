@@ -6,17 +6,17 @@
         Home
       </router-link>
     </div>
-    <div id="side">
+    <!-- <div id="side">
       <router-link to="/browse">
         <div class="menu-item browse">
           <p>Browse</p>
         </div>
       </router-link>
-      <router-link to="/cart">
+       <router-link to="/cart">
         <div class="menu-item">
         </div>
       </router-link>
-    </div>
+    </div> -->
   </div>
   <router-view />
 </div>

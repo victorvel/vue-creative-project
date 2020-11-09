@@ -5,7 +5,7 @@
         <i class="fas fa-search"></i><input v-model="searchText" />
       </form>
     </div>
-    <class-data :classes="singleClass" />
+    <ClassData :classes="classes" />
   </div>
 </template>
 
@@ -23,9 +23,8 @@ export default {
   },
   computed: {
     classes() {
-      return this.ClassData.singleClass.filter(
-        (singleClass) =>
-          singleClass.name.toLowerCase().search(this.searchText) >= 0
+      return this.data.ClassData.filter(
+        aClass => aClass.name.toLowerCase().search(this.searchText) >= 0
       );
     },
   },
